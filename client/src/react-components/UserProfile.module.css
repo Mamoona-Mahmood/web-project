@@ -1,0 +1,92 @@
+/* Container for the profile screen */
+.profileContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Card containing the user's profile */
+  .profileCard {
+    width: 90%;
+    max-width: 600px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  /* Header of the profile card */
+  .profileHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(to bottom, #007bff, #0056b3);
+    color: #ffffff;
+  }
+  
+  /* Profile image styling */
+  .profileImage {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    margin-bottom: 10px;
+  }
+  
+  /* User name styling */
+  .userName {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 10px 0 5px;
+  }
+  
+  /* User email styling */
+  .userEmail {
+    font-size: 1rem;
+    color: #f1f1f1;
+  }
+  
+  /* Profile details section */
+  .profileDetails {
+    padding: 20px;
+  }
+  
+  /* Heading for the details section */
+  .detailsHeading {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333333;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 5px;
+  }
+  
+  /* Styling for individual detail items */
+  .detailItem {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  
+  /* Label styling for detail items */
+  .detailLabel {
+    font-weight: bold;
+    color: #555555;
+  }
+  
+  /* List of appointments */
+  .appointmentsList {
+    margin-top: 10px;
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #333333;
+  }
+  
+  /* Individual appointment item */
+  .appointmentItem {
+    margin-bottom: 5px;
+  }
+  
