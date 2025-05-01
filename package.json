@@ -1,0 +1,17 @@
+{
+  "name": "web-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+  "client": "cd client && npm start",
+  "server": "cd server && npm run dev",
+  "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
