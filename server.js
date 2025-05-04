@@ -20,6 +20,9 @@ app.use(moragan("dev"));
 //port
 const port = process.env.PORT || 8080;
 
+//routes
+app.use("/api/v1/user", require("./routes/userRoutes.js"));
+
 app.listen(port, () => {
     console.log(
       `Server Running in ${process.env.NODE_MODE} Mode on port ${process.env.PORT}`
