@@ -2,7 +2,7 @@ const express = require("express")
 const colors = require("colors");
 const moragan = require("morgan");
 const dotenv = require("dotenv");
-const connectDB = require("./config/Db")
+const connectDB = require("./config/db")
 
 //dotenv conig
 dotenv.config();
