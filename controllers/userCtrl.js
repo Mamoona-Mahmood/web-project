@@ -21,9 +21,9 @@ const loginController = async (req, res) => {
       console.log(error);
       res.status(500).send({ message: `Error in Login CTRL ${error.message}` });
     }
-  };
+};
 
-  const authController = async (req, res) => {
+const authController = async (req, res) => {
     try {
       const user = await userModel.findById({ _id: req.body.userId });
       user.password = undefined;
@@ -46,7 +46,7 @@ const loginController = async (req, res) => {
         error,
       });
     }
-  };
+};
 
   module.exports = {
     loginController,
