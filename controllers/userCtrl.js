@@ -1,5 +1,9 @@
+const userModel = require("../models/userModels");
+
 // login callback
 const loginController = async (req, res) => {
+
+  console.log("LoginController", "Hello")
     try {
       const user = await userModel.findOne({ email: req.body.email });
       if (!user) {
@@ -7,12 +11,12 @@ const loginController = async (req, res) => {
           .status(200)
           .send({ message: "user not found", success: false });
       }
-      const isMatch = await bcrypt.compare(req.body.password, user.password);
-      if (!isMatch) {
-        return res
-          .status(200)
-          .send({ message: "Invlid EMail or Password", success: false });
-      }
+      // const isMatch = await bcrypt.compare(req.body.password, user.password);
+      // if (!isMatch) {
+      //   return res
+      //     .status(200)
+      //     .send({ message: "Invlid EMail or Password", success: false });
+      // }
       const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
         expiresIn: "1d",
       });
