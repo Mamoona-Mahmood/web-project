@@ -13,6 +13,10 @@ const router = express.Router();
 
 //routes
 //LOGIN || POST
+console.log("Router", "Hello")
 router.post("/login", loginController);
+
+//Auth || POST
+router.post("/getUserData", authMiddleware, authController);
 
 module.exports = router;
