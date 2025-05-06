@@ -1,9 +1,10 @@
 const userModel = require("../models/userModels");
+const jwt = require("jsonwebtoken");
+const bcrypt = require("bcryptjs");
 
 // login callback
 const loginController = async (req, res) => {
-
-  console.log("LoginController", "Hello")
+  console.log("LoginController Hello", req.body);
     try {
       const user = await userModel.findOne({ email: req.body.email });
       if (!user) {
@@ -18,7 +19,7 @@ const loginController = async (req, res) => {
       //     .send({ message: "Invlid EMail or Password", success: false });
       // }
       const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
-        expiresIn: "1d",
+        expiresIn: "30s",
       });
       res.status(200).send({ message: "Login Success", success: true, token });
     } catch (error) {

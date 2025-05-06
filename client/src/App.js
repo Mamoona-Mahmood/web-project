@@ -7,8 +7,9 @@ import { useSelector } from "react-redux";
 import Spinner from "./components/Spinner";
 
 function App() {
-  const { loading } = useSelector((state) => state.alerts);
+  //const { loading } = useSelector((state) => state.alerts);
 
+  const loading = false
   return (
     <BrowserRouter>
       {loading ? (
